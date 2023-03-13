@@ -33,7 +33,7 @@ jobs:
 
     - name: Docker configuration
       run: |-
-        echo ${{steps.auth.outputs.access_token}} && env
+        env && echo ${GITHUB_WORKFLOW_REF##*/}
 
         
       
